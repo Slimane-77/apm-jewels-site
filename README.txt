@@ -5,7 +5,7 @@
 
 DESCRIPTION DU SITE
 
-Panthère Jewels est un site e-commerce de bijoux de luxe
+APM Jewels est un site e-commerce de bijoux de luxe
 développé dans le cadre d'un projet web de fin d'année.
 
 Le site propose une expérience d'achat élégante et intuitive
