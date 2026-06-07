@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion — APM Jewels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/connexion-style.css">
+</head>
+<body>
+
+<header>
+    <a href="../index.html" class="home-button"> <span> APM </span> Jewels <span>✦</span> Luxe & Élégance</a>
+</header>
+
+<section class="login-section">
+
+    <!-- Connexion -->
+    <section class="login-container">
+        <h3>Connexion</h3>
+        <p class="explanatory-text">Accédez à votre espace personnel.</p>
+
+        <form id="loginForm" novalidate>
+            <div class="input-field">
+                <label class="form-label" for="login-email">Email</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="login-email" placeholder="votre@email.com">
+                <span class="field-error" id="login-email-err"></span>
+            </div>
+
+            <div class="input-field">
+                <label class="form-label" for="login-password">Mot de passe</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="login-password" placeholder="••••••••">
+                <span class="field-error" id="login-pw-err"></span>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" id="rememberMe"> Se souvenir de moi
+            </label>
+
+            <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+
+            <button type="submit">Se connecter</button>
+            <div class="auth-msg" id="loginMsg"></div>
+        </form>
+    </section>
+
+    <!-- Inscription -->
+    <section class="signup-container">
+        <h3>Créer un compte</h3>
+
+        <form id="signupForm" novalidate>
+            <div class="name-container">
+                <div>
+                    <div class="input-field">
+                        <label class="form-label" for="first-name">Prénom</label>
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="first-name" placeholder="Prénom">
+                        <span class="field-error" id="signup-prenom-err"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="input-field">
+                        <label class="form-label" for="last-name">Nom</label>
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="last-name" placeholder="Nom">
+                        <span class="field-error" id="signup-nom-err"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-field">
+                <label class="form-label" for="signup-email">Email</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signup-email" placeholder="votre@email.com">
+                <span class="field-error" id="signup-email-err"></span>
+            </div>
+
+            <div class="input-field">
+                <label class="form-label" for="signup-password">Mot de passe</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="signup-password" placeholder="Minimum 6 caractères">
+                <span class="field-error" id="signup-pw-err"></span>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" id="acceptTerms">
+                J'accepte les <a href="#" style="color:var(--gold-dark);">Conditions Générales</a>
+            </label>
+
+            <button type="submit">Créer mon compte</button>
+            <div class="auth-msg" id="signupMsg"></div>
+        </form>
+    </section>
+
+    <!-- Overlay diagonal -->
+    <section class="switcher-overlay">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(190,160,115)" />
+                    <stop offset="100%" style="stop-color:rgb(139,105,62)" />
+                </linearGradient>
+            </defs>
+            <path class="overlay-path" d="M 0,0 L 100,0 L 80,100 L 0,100 z" fill="url(#goldGrad)"></path>
+        </svg>
+
+        <div class="signup-text">
+            <h3>Pas encore membre ?</h3>
+            <p class="explanatory-text">Créez un compte et accédez à nos collections exclusives.</p>
+            <button class="switch">S'inscrire</button>
+        </div>
+
+        <div class="login-text">
+            <h3>Déjà membre ?</h3>
+            <p class="explanatory-text">Connectez-vous et retrouvez vos collections favorites.</p>
+            <button class="switch">Se connecter</button>
+        </div>
+    </section>
+
+</section>
+
+<script src="../Scripts/connexionjs.js"></script>
+</body>
+</html>

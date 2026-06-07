@@ -1,0 +1,304 @@
+:root {
+    --gold: rgb(221, 196, 160);
+    --gold-dark: rgb(190, 160, 115);
+    --dark: #1a1a1a;
+    --bg: #faf8f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+html { font-size: 62.5%; }
+body { background: var(--bg); }
+
+header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding: 1.4rem 5%;
+    z-index: 10;
+}
+
+.home-button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.1rem;
+}
+
+.home-button span { color: var(--gold-dark); }
+.signup-open .home-button { color: #fff; }
+
+.login-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.login-section > section {
+    width: 50%;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 6rem 3.5rem 2rem 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-container.signup-container {
+    left: 50%;
+    padding: 6rem 5% 2rem 3.5rem;
+}
+
+/* Titres */
+h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05rem;
+}
+
+.explanatory-text {
+    font-size: 1.25rem;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Champs */
+form > *:not(.checkbox):not(.name-container) {
+    display: block;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+.input-field i {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold-dark);
+    font-size: 1.3rem;
+    pointer-events: none;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0.9rem 1.2rem 0.9rem 3.6rem;
+    border: 1.5px solid #ddd !important;
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--dark);
+    background: #fff;
+}
+
+.input-field input:focus {
+    border-color: var(--gold-dark) !important;
+    box-shadow: 0 0 0 3px rgba(190,160,115,0.12);
+}
+
+.field-error {
+    display: block;
+    font-size: 1.05rem;
+    color: #c0392b;
+    margin-top: -1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Bouton submit */
+.login-section button[type="submit"] {
+    width: 100%;
+    background: var(--dark);
+    color: #fff;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.08rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+}
+
+.login-section button[type="submit"]:hover {
+    background: var(--gold-dark);
+    color: #fff;
+}
+
+/* Checkbox + lien oublié */
+.checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.checkbox input { width: auto !important; accent-color: var(--gold-dark); }
+
+.forgot-link {
+    float: right;
+    font-size: 1.1rem;
+    color: var(--gold-dark);
+    margin-bottom: 1.2rem;
+}
+
+.forgot-link:hover { color: var(--dark); }
+
+/* Nom sur deux colonnes */
+.name-container {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.name-container > div { flex: 1; }
+
+/* Message auth */
+.auth-msg {
+    display: none;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.auth-msg.success {
+    background: #eafaf1;
+    border: 1px solid #a9dfbf;
+    color: #27ae60;
+}
+
+.auth-msg.error {
+    background: #fdedec;
+    border: 1px solid #f5b7b1;
+    color: #c0392b;
+}
+
+/* Overlay diagonal */
+.switcher-overlay {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0; left: 0;
+    transition: transform 0.22s ease;
+    height: 100%;
+    width: 50%;
+    padding: 0 5em 0 1em;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.switcher-overlay svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.switcher-overlay > div {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+
+.switcher-overlay h3 { color: #fff; }
+.switcher-overlay .explanatory-text { color: rgba(255,255,255,0.78); }
+
+.switcher-overlay button.switch {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.7) !important;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.7rem 2.5rem;
+    font-size: 1.25rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.switcher-overlay button.switch:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.login-open .switcher-overlay {
+    transform: translateX(100%);
+    padding: 0 1em 0 5em;
+}
+
+.login-open .overlay-path {
+    d: path('M 0,0 L 100,0 L 100,100 L 20,100 z');
+}
+
+.login-open .login-text,
+.signup-open .signup-text { display: none; }
+
+/* Responsive */
+@media (max-width: 680px) {
+    .login-section > section {
+        width: 100%;
+        position: static;
+        min-height: auto;
+        padding: 5.5rem 5% 2.5rem;
+    }
+
+    .switcher-overlay {
+        height: auto !important;
+        position: static;
+        transform: none !important;
+        padding: 2.5rem 5%;
+        color: var(--dark);
+    }
+
+    .switcher-overlay svg { display: none; }
+    .switcher-overlay > div { top: auto; transform: none; }
+    .switcher-overlay h3 { color: var(--dark); }
+    .switcher-overlay .explanatory-text { color: #999; }
+    .switcher-overlay button.switch {
+        border-color: var(--gold-dark) !important;
+        color: var(--dark);
+    }
+    .signup-open .home-button { color: var(--dark); }
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateX(0); }
+    30% { transform: translateX(5px); }
+}
+@keyframes bounceLeft {
+    0%, 100% { transform: translateX(0); }
+    30% { transform: translateX(-5px); }
+}

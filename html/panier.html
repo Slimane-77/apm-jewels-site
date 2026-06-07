@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier — APM Jewels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="stylesheet" href="../Styles/style-additions.css">
+    <link rel="stylesheet" href="../Styles/stylepanier.css">
+</head>
+<body>
+
+<!-- Header simplifié panier -->
+<header class="panier-header-bar">
+    <a href="../index.html" class="panier-logo"> <span>APM</span> Jewels <span>✦</span> Luxe & Élégance</a>
+    <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Retour boutique</a>
+</header>
+
+<!-- Contenu panier -->
+<div class="panier-page" id="panierPage">
+
+    <!-- Colonne gauche: liste articles -->
+    <div class="panier-left">
+        <h1 class="panier-title">Mon Panier</h1>
+        <p class="panier-count" id="panierCount">0 article(s)</p>
+
+        <div id="panierEmpty" class="panier-empty" style="display:none;">
+            <i class="fas fa-shopping-bag"></i>
+            <p>Votre panier est vide.</p>
+            <a href="../index.html">Découvrir nos collections</a>
+        </div>
+
+        <div class="panier-items" id="panierItems"></div>
+    </div>
+
+    <!-- Colonne droite: récapitulatif -->
+    <div class="panier-summary" id="panierSummary">
+        <h2 class="summary-title">Récapitulatif</h2>
+
+        <div class="summary-line">
+            <span>Sous-total</span>
+            <span id="subtotalDisplay">0 €</span>
+        </div>
+        <div class="summary-line">
+            <span>Livraison</span>
+            <span id="livraisonDisplay">Offerte</span>
+        </div>
+        <div class="summary-line">
+            <span>TVA (20%)</span>
+            <span id="tvaDisplay">0 €</span>
+        </div>
+        <div class="summary-line total">
+            <span>Total TTC</span>
+            <span id="totalDisplay">0 €</span>
+        </div>
+
+        <div class="promo-wrap">
+            <input type="text" class="promo-input" id="promoInput" placeholder="CODE PROMO">
+            <button class="promo-btn" onclick="applyPromo()">Appliquer</button>
+        </div>
+        <div id="promoMsg" style="font-size:1.2rem; text-transform:none; margin-bottom:1rem;"></div>
+
+        <button class="checkout-btn" id="checkoutBtn" onclick="openCheckout()">
+            <i class="fas fa-lock"></i> Procéder au paiement
+        </button>
+    </div>
+</div>
+
+<div class="checkout-overlay" id="checkoutOverlay">
+    <div class="checkout-modal">
+        <div class="checkout-modal-header">
+            <span class="checkout-modal-title">Finaliser la commande</span>
+            <button class="close-modal-btn" onclick="closeCheckout()"><i class="fas fa-times"></i></button>
+        </div>
+
+        <!-- Indicateur d'étapes -->
+        <div class="checkout-steps">
+            <div class="step active" id="step-indicator-1">
+                <span class="step-num">1</span> Livraison
+            </div>
+            <div class="step" id="step-indicator-2">
+                <span class="step-num">2</span> Paiement
+            </div>
+            <div class="step" id="step-indicator-3">
+                <span class="step-num">3</span> Confirmation
+            </div>
+        </div>
+
+        <div class="checkout-body">
+
+            <!-- ÉTAPE 1: Adresse de livraison -->
+            <div class="checkout-section active" id="checkout-step-1">
+                <h3 class="checkout-section-title"><i class="fas fa-map-marker-alt"></i> Adresse de livraison</h3>
+
+                <div class="checkout-row">
+                    <div class="checkout-form-group">
+                        <label for="chkPrenom">Prénom</label>
+                        <input type="text" class="checkout-input" id="chkPrenom" placeholder="Prénom">
+                        <div class="checkout-error" id="err-prenom"></div>
+                    </div>
+                    <div class="checkout-form-group">
+                        <label for="chkNom">Nom</label>
+                        <input type="text" class="checkout-input" id="chkNom" placeholder="Nom">
+                        <div class="checkout-error" id="err-nom"></div>
+                    </div>
+                </div>
+
+                <div class="checkout-form-group">
+                    <label for="chkEmail">Email</label>
+                    <input type="email" class="checkout-input" id="chkEmail" placeholder="votre@email.com">
+                    <div class="checkout-error" id="err-email"></div>
+                </div>
+
+                <div class="checkout-form-group">
+                    <label for="chkTel">Téléphone</label>
+                    <input type="tel" class="checkout-input" id="chkTel" placeholder="+213 6 00 00 00 00">
+                    <div class="checkout-error" id="err-tel"></div>
+                </div>
+
+                <div class="checkout-form-group">
+                    <label for="chkAdresse">Adresse</label>
+                    <input type="text" class="checkout-input" id="chkAdresse" placeholder="Votre adresse">
+                    <div class="checkout-error" id="err-adresse"></div>
+                </div>
+
+                <div class="checkout-row">
+                    <div class="checkout-form-group">
+                        <label for="chkVille">Ville</label>
+                        <input type="text" class="checkout-input" id="chkVille" placeholder="Ville">
+                        <div class="checkout-error" id="err-ville"></div>
+                    </div>
+                    <div class="checkout-form-group">
+                        <label for="chkCode">Code postal</label>
+                        <input type="text" class="checkout-input" id="chkCode" placeholder="00000">
+                        <div class="checkout-error" id="err-code"></div>
+                    </div>
+                </div>
+
+                <div class="checkout-nav">
+                    <button class="next-btn" onclick="goStep(2)">Continuer <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- ÉTAPE 2: Paiement -->
+            <div class="checkout-section" id="checkout-step-2">
+                <h3 class="checkout-section-title"><i class="fas fa-credit-card"></i> Informations de paiement</h3>
+
+                <div class="checkout-form-group">
+                    <label for="chkCardName">Nom sur la carte</label>
+                    <input type="text" class="checkout-input" id="chkCardName" placeholder="Prénom Nom">
+                    <div class="checkout-error" id="err-cardname"></div>
+                </div>
+
+                <div class="checkout-form-group">
+                    <label for="chkCardNum">Numéro de carte</label>
+                    <div class="card-number-wrap">
+                        <input type="text" class="checkout-input" id="chkCardNum"
+                            placeholder="1234 5678 9012 3456" maxlength="19">
+                        <div class="card-icons">
+                            <i class="fab fa-cc-visa" style="font-size:2.2rem; color:#1a1f71; opacity:0.6;"></i>
+                            <i class="fab fa-cc-mastercard" style="font-size:2.2rem; color:#eb001b; opacity:0.6;"></i>
+                        </div>
+                    </div>
+                    <div class="checkout-error" id="err-cardnum"></div>
+                </div>
+
+                <div class="checkout-row">
+                    <div class="checkout-form-group">
+                        <label for="chkExpiry">Date d'expiration</label>
+                        <input type="text" class="checkout-input" id="chkExpiry"
+                            placeholder="MM/AA" maxlength="5">
+                        <div class="checkout-error" id="err-expiry"></div>
+                    </div>
+                    <div class="checkout-form-group">
+                        <label for="chkCvv">CVV</label>
+                        <input type="text" class="checkout-input" id="chkCvv"
+                            placeholder="123" maxlength="4">
+                        <div class="checkout-error" id="err-cvv"></div>
+                    </div>
+                </div>
+
+                <div class="checkout-nav">
+                    <button class="prev-btn" onclick="goStep(1)"><i class="fas fa-arrow-left"></i> Retour</button>
+                    <button class="next-btn" onclick="goStep(3)">Vérifier <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- ÉTAPE 3: Confirmation -->
+            <div class="checkout-section" id="checkout-step-3">
+                <h3 class="checkout-section-title"><i class="fas fa-check-circle"></i> Confirmer la commande</h3>
+
+                <div class="order-recap" id="orderRecap"></div>
+
+                <div style="font-size:1.3rem; color:#777; text-transform:none; line-height:1.7; margin-bottom:1.5rem;">
+                    En confirmant, vous acceptez nos <a href="#" style="color:rgb(190,160,115);">conditions générales de vente</a>.
+                    Votre paiement est sécurisé et crypté.
+                </div>
+
+                <div class="checkout-nav">
+                    <button class="prev-btn" onclick="goStep(2)"><i class="fas fa-arrow-left"></i> Retour</button>
+                    <button class="confirm-btn" onclick="confirmOrder()">
+                        <i class="fas fa-lock"></i> Confirmer et payer
+                    </button>
+                </div>
+            </div>
+
+            <!-- ÉTAPE 4: Succès -->
+            <div class="checkout-section" id="checkout-step-success">
+                <div class="success-screen">
+                    <div class="success-icon"><i class="fas fa-check"></i></div>
+                    <h3>Commande confirmée !</h3>
+                    <p>Merci pour votre achat. Vous recevrez un email de confirmation sous peu.</p>
+                    <div class="order-ref" id="orderRef"></div>
+                    <p>Livraison estimée : <strong id="deliveryDate"></strong></p>
+                    <a href="../index.html" class="back-home-btn" onclick="clearCartAndClose()">
+                        <i class="fas fa-gem"></i> Continuer mes achats
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../Scripts/panierjs.js"></script>
+</body>
+</html>

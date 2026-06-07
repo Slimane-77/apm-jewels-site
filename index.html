@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APM Jewels - Luxe & Élégance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/style-additions.css">
+</head>
+<body>
+
+<header>
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+    
+    <a href="#" class="logo"><span>APM</span> Jewels <br> Luxe & <span>Élégance</span></a>
+
+    <nav class="navbar">
+        <a href="#home">Accuil</a>
+        <a href="#about">À&nbsp;propos</a>
+        <a href="#product">Produits</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="icons">
+        <a href="html/connexion.html" class="btn-login">Connexion</a>
+    </div>
+</header>
+
+<!-- home section  -->
+<section class="home" id="home">
+    <div class="content">
+        <h3>APM Jewels</h3>
+        <span>Colliers · Bagues · Bracelets · Pendentifs · Boucles d'oreilles</span>
+        <p>Des pièces uniques, pensées pour sublimer chaque moment.</p>
+        <a href="#product" class="btn">Découvrir</a>
+    </div>
+</section>
+
+<!-- about section -->
+<section class="about" id="about">
+    <div class="about-bg-deco"></div>
+    <h1 class="heading about-heading"><span class="heading-line">À propos De Nous</span></h1>
+    <div class="row">
+         <div class="video-container">
+             <div class="video-frame-deco"></div>
+             <video src="Vidéos/video.mp4" loop autoplay muted>
+             </video> 
+         </div>
+
+        <div class="content">
+            <div class="about-badge">Notre Histoire</div>
+            <h3>Pourquoi nou choisir?</h3>
+            <p>Chez nous, chaque bijou raconte une histoire. Nous ne proposons pas simplement des accessoires, mais des pièces soigneusement sélectionnées pour sublimer votre style et révéler votre personnalité.</p>
+            <p>Derrière chaque bijou, il y a une attention particulière aux détails et une vraie passion pour l'élégance.</p>
+            <div class="about-features">
+                <div class="about-feature"><i class="fas fa-gem"></i><span>Qualité Premium</span></div>
+                <div class="about-feature"><i class="fas fa-shield-alt"></i><span>Garantie 2 ans</span></div>
+                <div class="about-feature"><i class="fas fa-truck"></i><span>Livraison Offerte</span></div>
+            </div>
+            <a href="#" class="btn">En savoir plus</a>
+        </div>
+    </div>
+</section>
+
+<!-- Poducts section -->
+<section class="product" id="product">
+
+    <div class="product-header">
+        <h1 class="product-main-title">Nos Collections</h1>
+        <p class="product-subtitle">Découvrez l'élégance dans chaque détail</p>
+    </div>
+
+    <!-- Filtre par catégorie -->
+    <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">Tous</button>
+        <button class="tab-btn" data-category="colliers">Colliers</button>
+        <button class="tab-btn" data-category="bagues">Bagues</button>
+        <button class="tab-btn" data-category="pendentifs">Pendentifs</button>
+        <button class="tab-btn" data-category="bracelets">Bracelets</button>
+        <button class="tab-btn" data-category="boucles">Boucles d'Oreilles</button>
+    </div>
+
+    <!-- ---- COLLIERS ---- -->
+    <div class="collection-block" id="block-colliers">
+        <div class="collection-label">
+            <span class="collection-icon">✦</span>
+            <h2 class="collection-title">Colliers</h2>
+            <div class="scroll-arrows">
+                <button class="arrow-btn" onclick="scrollLeft('scroll-colliers')"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-btn" onclick="scrollRight('scroll-colliers')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="products-scroll" id="scroll-colliers">
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier1.jpg" alt="Collier 1">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier de perles à double tour 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">400 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier2.jpg" alt="Collier 2">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier swarovski 18k gold & lab diamond</p>
+                    <div class="card-bottom">
+                        <span class="card-price">645 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier3.jpg" alt="Collier 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-15%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier sparkles 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">228 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier4.jpg" alt="Collier 4">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier hardwear 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">350 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier5.jpg" alt="Collier 5">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier devil eye gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">77 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier6.jpg" alt="Collier 6">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier double tour hard wear 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">280 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier7.jpg" alt="Collier 7">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier multiple tour 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">119 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier8.jpg" alt="Collier 8">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier one diamond 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">119 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier9.jpg" alt="Collier 9">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier knot 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">80 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card" data-category="colliers">
+                <div class="card-img-wrap">
+                    <img src="Images/colliers/collier10.jpg" alt="Collier 10">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-20%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Collier angel wings 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">120 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- BAGUES ---- -->
+    <div class="collection-block" id="block-bagues">
+        <div class="collection-label">
+            <span class="collection-icon">◈</span>
+            <h2 class="collection-title">Bagues</h2>
+            <div class="scroll-arrows">
+                <button class="arrow-btn" onclick="scrollLeft('scroll-bagues')"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-btn" onclick="scrollRight('scroll-bagues')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="products-scroll" id="scroll-bagues">
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague1.jpg" alt="Bague 1">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague mpnaco 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">260 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague2.jpg" alt="Bague 2">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Jeulia Knot 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">388 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague3.jpg" alt="Bague 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-10%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Cobblestone 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">560 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague4.jpg" alt="Bague 4">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague éclat 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">177 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague5.jpg" alt="Bague 5">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Tear Drop 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">349 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague6.jpg" alt="Bague 6">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague love 18k gold & silver</p>
+                    <div class="card-bottom">
+                        <span class="card-price">159 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague7.jpg" alt="Bague 7">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Art déco 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">599 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague8.jpg" alt="Bague 8">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Art déco 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">599 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague9.jpg" alt="Bague 9">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague Piercing 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">459 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bagues">
+                <div class="card-img-wrap">
+                    <img src="Images/bagues/bague10.jpg" alt="Bague 10">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bague aurore 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">184 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- PENDENTIFS ---- -->
+    <div class="collection-block" id="block-pendentifs">
+        <div class="collection-label">
+            <span class="collection-icon">❋</span>
+            <h2 class="collection-title">Pendentifs</h2>
+            <div class="scroll-arrows">
+                <button class="arrow-btn" onclick="scrollLeft('scroll-pendentifs')"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-btn" onclick="scrollRight('scroll-pendentifs')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="products-scroll" id="scroll-pendentifs">
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif1.jpg" alt="Pendentif 1">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif heart 18k gold & pink diamond</p>
+                    <div class="card-bottom">
+                        <span class="card-price">60 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif2.jpg" alt="Pendentif 2">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif flamingo rosy gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">34 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif3.jpg" alt="Pendentif 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-20%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif tree 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">34 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif4.jpg" alt="Pendentif 4">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif bee 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">44 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif5.jpg" alt="Pendentif 5">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">sea treasure 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">44 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif6.jpg" alt="Pendentif 6">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif papillon</p>
+                    <div class="card-bottom">
+                        <span class="card-price">50 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif7.jpg" alt="Pendentif 7">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif pink flour 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">39 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif8.jpg" alt="Pendentif 8">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Pendentif coeur 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">43 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif9.jpg" alt="Pendentif 9">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">bougie 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">44 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="pendentifs">
+                <div class="card-img-wrap">
+                    <img src="Images/pendentifs/pendentif10.jpg" alt="Pendentif 10">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">sea pendant 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">44 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- BRACELETS ---- -->
+    <div class="collection-block" id="block-bracelets">
+        <div class="collection-label">
+            <span class="collection-icon">◉</span>
+            <h2 class="collection-title">Bracelets</h2>
+            <div class="scroll-arrows">
+                <button class="arrow-btn" onclick="scrollLeft('scroll-bracelets')"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-btn" onclick="scrollRight('scroll-bracelets')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="products-scroll" id="scroll-bracelets">
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet1.jpg" alt="Bracelet 1">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">clair de lune finitions dorée et cristaux étincelants 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">76 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet2.jpg" alt="Bracelet 2">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Bracelet bangle 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">109 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet3.jpg" alt="Bracelet 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-12%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">love knot 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">66 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet4.jpg" alt="Bracelet 4">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">gravitu 21k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">298 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet5.jpg" alt="Bracelet 5">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">heartless 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">290 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet6.jpg" alt="Bracelet 6">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">G&S 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">67 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet7.jpg" alt="Bracelet 7">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">drop tear 21k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">300 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet8.jpg" alt="Bracelet 8">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">holiday set 21k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">300 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+             <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet9.jpg" alt="Bracelet 9">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">celeste cuff 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">180 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet10.jpg" alt="Bracelet 10">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">golden glamour 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">199 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet11.jpg" alt="Bracelet 11">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">single nail bangle 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">219 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="bracelets">
+                <div class="card-img-wrap">
+                    <img src="Images/bracelets/bracelet12.jpg" alt="Bracelet 12">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">bracelet twiste 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">99 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---- BOUCLES D'OREILLES ---- -->
+    <div class="collection-block" id="block-boucles">
+        <div class="collection-label">
+            <span class="collection-icon">✿</span>
+            <h2 class="collection-title">Boucles d'Oreilles</h2>
+            <div class="scroll-arrows">
+                <button class="arrow-btn" onclick="scrollLeft('scroll-boucles')"><i class="fas fa-chevron-left"></i></button>
+                <button class="arrow-btn" onclick="scrollRight('scroll-boucles')"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="products-scroll" id="scroll-boucles">
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle1.jpg" alt="Boucles 1">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles monaco multicolore safety pin 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">99 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle2.jpg" alt="Boucles 2">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles twisted huggies 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">109 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle3.jpg" alt="Boucles 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-18%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles love knot 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">80 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle4.jpg" alt="Boucles 4">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles spring 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">380 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle5.jpg" alt="Boucles 5">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles galaxy 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">100 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle6.jpg" alt="Boucles 6">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles chandelier 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">77 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle7.jpg" alt="Boucles 7">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-new">Nouveau</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles ettika crystal 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">180 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle8.jpg" alt="Boucles 8">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles piaget 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">380 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle9.jpg" alt="Boucles 9">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles goldie huggies 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">80 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle10.jpg" alt="Boucles 10">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles maille marine hoop 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">77 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle11.jpg" alt="Boucles 11">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles ember 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">75 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card" data-category="boucles">
+                <div class="card-img-wrap">
+                    <img src="Images/boucles/boucle3.jpg" alt="Boucles 3">
+                    <div class="card-overlay">
+                        <a href="#" class="overlay-btn" onclick="event.preventDefault(); openApercu(this)">Aperçu rapide</a>
+                    </div>
+                    <span class="badge-promo">-15%</span>
+                </div>
+                <div class="card-info">
+                    <p class="card-name">Boucle d'oreilles tear drop 18k gold</p>
+                    <div class="card-bottom">
+                        <span class="card-price">60 €</span>
+                        <a href="#" class="card-buy"><i class="fas fa-shopping-bag"></i> Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-cart-cta">
+        <a href="html/panier.html" class="btn-voir-panier" id="btnVoirPanier">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Voir mon panier</span>
+            <span class="panier-cta-badge" id="panierCtaBadge" style="display:none;">0</span>
+        </a>
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-inner">
+        <div class="contact-left">
+            <div class="contact-badge">Nous Contacter</div>
+            <h2 class="contact-title">Parlons de vos <span>Bijoux</span></h2>
+            <p class="contact-desc">Notre équipe est disponible pour vous conseiller et répondre à toutes vos questions sur nos collections.</p>
+
+            <div class="contact-info-list">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <strong>Adresse</strong>
+                        <p>La Tour, Tizi Ouzou</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div>
+                        <strong>Téléphone</strong>
+                        <p>+213 1 23 45 67 89</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <strong>Email</strong>
+                        <p>APMJewels@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-socials">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="contactName">Nom complet</label>
+                    <div class="input-wrap">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="contactName" placeholder="Votre nom" required>
+                    </div>
+                    <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Adresse email</label>
+                    <div class="input-wrap">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="contactEmail" placeholder="votre@email.com" required>
+                    </div>
+                    <span class="form-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactPhone">Téléphone (optionnel)</label>
+                    <div class="input-wrap">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="contactPhone" placeholder="+213 6 00 00 00 00">
+                    </div>
+                    <span class="form-error" id="phoneError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contactMsg">Votre message</label>
+                    <div class="input-wrap textarea-wrap">
+                        <i class="fas fa-comment-dots"></i>
+                        <textarea id="contactMsg" placeholder="Comment puis-je vous aider ?" rows="4" required></textarea>
+                    </div>
+                    <span class="form-error" id="msgError"></span>
+                </div>
+                <button type="submit" class="contact-btn">
+                    <span>Envoyer le message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <div class="contact-success" id="contactSuccess">
+                    <i class="fas fa-check-circle"></i> Message envoyé avec succès !
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-logo"><span>APM</span> Jewels <span>✦</span> Luxe & Élégance</div>
+        <p class="footer-copy">© 2026 Panthère Jewels. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#product">Produits</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Toast notification panier -->
+<div class="cart-toast" id="cartToast">
+    <i class="fas fa-shopping-bag"></i>
+    <span id="cartToastMsg">Produit ajouté au panier !</span>
+</div>
+
+<!-- Badge panier -->
+<style>
+    #cart-icon { position: relative; }
+    .cart-badge {
+        position: absolute;
+        top: -8px; right: -10px;
+        background: #c0392b;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 18px; height: 18px;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        pointer-events: none;
+    }
+</style>
+
+<div class="apercu-overlay" id="apercuOverlay" onclick="closeApercu(event)">
+    <div class="apercu-box">
+        <button class="apercu-close" onclick="closeApercu()">×</button>
+        <img id="apercuImg" src="" alt="">
+        <div class="apercu-info">
+            <span class="apercu-name" id="apercuName"></span>
+            <span class="apercu-price" id="apercuPrice"></span>
+        </div>
+    </div>
+</div>
+
+<script src="Scripts/main.js"></script>
+</body>
+</html>
